@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="lib/asm-3.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.7.jar"/>
+	<classpathentry kind="lib" path="lib/grizzly-framework-2.1.9.jar"/>
+	<classpathentry kind="lib" path="lib/grizzly-servlet-webserver-1.9.36.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-bundle-1.11-b01.jar"/>
+	<classpathentry kind="lib" path="lib/jsr311-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/sqlite4java.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="ppdb/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/velocity-1.7-dep.jar"/>
+	<classpathentry kind="lib" path="lib/velocity-1.7.jar"/>
+	<classpathentry kind="lib" path="lib/velocity-tools-2.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
