@@ -1,0 +1,22 @@
+<html>
+<head>
+	<style>
+	 img {max-height:80px;}
+	 </style>
+</head>
+<body>
+  <a href="/">Back to index</a> - <a href="/seller">Back to sellers</a>
+  <h1>$seller_name</h1>
+  <h2><a href="$url">$url</a></h2>
+  <table>
+#foreach ($item in $items)
+    <tr>
+      <td><a href="/product/${item.product_id}"><img src="/product/${item.product_id}/image.jpg" /></a></td>
+      <td>$item.product_name - <a href="/maker/${item.maker_id}">$item.maker_name</a><br/><a href="$item.url">$item.url</a></td>
+    </tr>
+#end
+  </table>
+</body>
+</html>
+
+

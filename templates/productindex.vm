@@ -1,0 +1,26 @@
+<html>
+<head>
+	<style>
+	 img {max-height:80px;}
+	 </style>
+</head>
+<body>
+  <a href="/maker">Browse makers</a> - <a href="/seller">Browse sellers</a> - <a href="/sales">Browse sales</a><br/>
+  <table>
+#foreach ($item in $list)
+    <tr>
+      <td><a href="/product/${item.product_id}"><img src="/product/${item.product_id}/image.jpg" /></a></td>
+      <td>$item.product_name - 
+#if ($item.maker_id == 0)
+  $item.maker_name
+#else
+  <a href="/maker/${item.maker_id}">$item.maker_name</a>
+  <br/>
+  <a href="$item.url">$item.url</a>
+#end
+</td>
+    </tr>
+#end
+  </table>
+</body>
+</html>

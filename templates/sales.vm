@@ -1,0 +1,27 @@
+<html>
+<head>
+	<style>
+	 img {max-height:80px;}
+	 </style>
+</head>
+<body>
+  <a href="/">Back to index</a>
+  <table>
+#foreach ($item in $list)
+    <tr>
+      <td><a href="/product/${item.product_id}"><img src="/product/${item.product_id}/image.jpg" /></a></td>
+      <td>$item.product_name - Maker:
+#if ($item.maker_id == 0)
+  $item.maker_name
+#else
+  <a href="/maker/${item.maker_id}">$item.maker_name</a>
+#end
+  <br/>
+  <a href="$item.sale_url">Available</a>
+  for <b>$numberTool.currency($item.sale_price)</b> at <a href="/seller/${item.seller_id}">${item.seller_name}</a>
+</td>
+    </tr>
+#end
+  </table>
+</body>
+</html>

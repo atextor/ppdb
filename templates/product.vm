@@ -1,0 +1,41 @@
+<html>
+<head>
+	<style>
+	 img {max-height:150px;}
+	 </style>
+</head>
+<body>
+  <a href="/">Back to index</a>
+  <h1>$product_name</h1>
+#if ($aliases.size() > 0)
+  <h2>Also known as:<ul>
+#foreach ($alias in $aliases)
+<li>${alias}</li>
+#end
+</ul></h2><br/>
+#end
+#if ($maker_id == 0)
+  <h2>Unknown</h2>
+#else
+  <h2><a href="/maker/${maker_id}">$maker_name</a> - <a href="$url">$url</a></h2>
+#end
+  <table>
+#foreach ($image in $images)
+  <a href="/image/${image}.jpg"><img src="/image/${image}.jpg" /></a>
+#end
+  </table>
+  <ul>
+#foreach ($feature in $features)
+    <li>$feature</li>
+#end
+  </ul>
+#if ($availability.size() > 0)
+<h3>Available at:</h3>
+<ul>
+#foreach($av in $availability)
+  <li><a href="/seller/${av.seller_id}">${av.seller_name}</a>: <b>$numberTool.currency($av.price)</b> - <a href="${av.url}">${av.short_url}</a></li>  
+#end
+</ul>
+#end
+</body>
+</html>
